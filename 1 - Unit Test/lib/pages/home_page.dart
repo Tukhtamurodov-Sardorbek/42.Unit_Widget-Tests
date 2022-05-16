@@ -42,7 +42,7 @@ class _HomePageState extends State<HomePage> {
   void parseResponse(String? response) {
     if (response != null) {
       setState(() {
-        posts = Network.parsePostList(response);
+       posts = List<Post>.from(Network.parsePostList(response));
       });
     }
     setState(() {
